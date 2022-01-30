@@ -4,10 +4,6 @@ import store from '@/store'
 import { getToken } from '@/utils/auth'
 import packageJson from '../../package.json'
 
-/**
- * process.env是Node.js中的一个环境对象
- */
-
 const service = axios.create({
   // url = base url + request url
   baseURL: process.env.VUE_APP_BASE_API,

@@ -30,6 +30,16 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
+    },
+    // 配置开发环境跨域问题
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8082',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
     }
   },
   configureWebpack: {
