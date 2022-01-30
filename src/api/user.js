@@ -7,7 +7,11 @@ export function login(data) {
 }
 
 export function getInfo(token) {
-
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ data: { name: 'Jack', avatar: 'https://img01.yzcdn.cn/vant/cat.jpeg' }})
+    }, 300)
+  })
 }
 
 export function logout() {
