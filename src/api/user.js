@@ -2,7 +2,7 @@
 
 export function login(data) {
   return new Promise((resolve, reject) => {
-    setTimeout(() => { resolve({ data: { msg: '成功', code: 200 }}) }, 1000)
+    setTimeout(() => { resolve({ data: { msg: '成功', code: 200, token: 'login-mock' }}) }, 1000)
   })
 }
 

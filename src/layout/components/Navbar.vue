@@ -7,7 +7,7 @@
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
-          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
+          <img v-imagerror="defaultAvatar" :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
           <span class="username">{{ name }}</span>
           <i class="el-icon-caret-bottom" />
         </div>
@@ -45,6 +45,11 @@ export default {
       'avatar',
       'name'
     ])
+  },
+  data() {
+    return {
+      defaultAvatar: require('@/assets/logo.png')
+    }
   },
   methods: {
     toggleSideBar() {

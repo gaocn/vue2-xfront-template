@@ -44,6 +44,7 @@ router.beforeEach(async(to, from, next) => {
     }
   } else {
     /* has no token*/
+    console.log('unlogin')
     if (whiteList.indexOf(to.path) !== -1) {
       next()
     } else {
