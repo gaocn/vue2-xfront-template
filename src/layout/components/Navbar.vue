@@ -44,11 +44,9 @@ export default {
       'sidebar',
       'avatar',
       'name'
-    ])
-  },
-  data() {
-    return {
-      defaultAvatar: require('@/assets/logo.png')
+    ]),
+    defaultAvatar() {
+      return require('@/assets/logo.png')
     }
   },
   methods: {

@@ -20,6 +20,10 @@ import '@/permission'
 import * as directives from '@/directives'
 Object.keys(directives).forEach(k => Vue.directive(k, directives[k]))
 
+// 注册自定义过滤器
+import * as filters from '@/filters'
+Object.keys(filters).forEach(key => { Vue.filter(key, filters[key]) })
+
 // set ElementUI lang to EN
 // Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
